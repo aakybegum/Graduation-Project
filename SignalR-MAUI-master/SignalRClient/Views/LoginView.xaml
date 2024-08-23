@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SignalRClient.Views.LoginView"
+             Title="hearMe">
+    <Grid RowDefinitions=".3*,.7*">
+        <Image Aspect="AspectFill" Source="foto1.jpeg"></Image>
+        <Grid BackgroundColor="aqua" Opacity=".3"></Grid>
+        <Grid ColumnDefinitions="*,*">
+            <Button
+                x:Name="btnListenCommands"
+                Text="Listen Commands"
+                FontSize="Large"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Start"
+                Clicked="btnListenCommands_Clicked"
+                HeightRequest="500"
+                WidthRequest="250"
+                Opacity="0"/>
+            <Image Aspect="AspectFit"
+                   Opacity=".8"
+                   HeightRequest="150"
+                   Source="logopng.png"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <RoundRectangle Margin="-5,-30,-5,-2"
+                            CornerRadius="30,30,0,0"
+                            Fill="White"/>
+            <VerticalStackLayout Margin="30,0,30,0">
+                <Label FontAttributes="Bold"
+                       FontFamily="Medium"
+                       Text="Hoşgeldin..."
+                       TextColor="#2D2D2D"/>
+                <Label FontFamily="medium"
+                       Text="Devam Etmek İçin Giriş Yap"
+                       TextColor="#A3A3A4"/>
+                <Grid Margin="0,30,0,0" RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions=".2*,.8*">
+                    <!-- Phone Number Row -->
+                    <RoundRectangle Grid.Row="0"
+                                    BackgroundColor="#EDEBF6"
+                                    CornerRadius="10"
+                                    HeightRequest="60"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    WidthRequest="60" />
+                    <Frame Grid.Row="0"
+                           BackgroundColor="DeepSkyBlue"
+                           
+                           CornerRadius="10"
+                           HeightRequest="60"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           WidthRequest="60"
+                           Padding="5">
+                        <!-- Added Padding -->
+                        <Image Source="telefon.png"
+                               Aspect="AspectFit"
+                               Margin="5" />
+                        <!-- Added Margin -->
+                    </Frame>
+                    <Entry Grid.Row="0"
+                           Grid.Column="1"
+                           Placeholder="Telefon Numarası"
+                           x:Name="EntryPhoneNumber"
+                           TextColor="Black"
+                           Keyboard="Telephone"
+                           VerticalOptions="Center"/>
+
+                    <!-- Send Code Button -->
+                    <Button Grid.Row="1"
+                            Grid.ColumnSpan="2"
+                            Margin="0,10,0,10"
+                            BackgroundColor="DeepSkyBlue"
+                            x:Name="SendCodeButton"
+                            Clicked="SendCodeButton_Clicked"
+                            HeightRequest="60"
+                            Text="Kod Gönder"
+                            TextColor="#FBF6FD"/>
+
+                    <!-- Verification Code Row -->
+                    <RoundRectangle Grid.Row="2"
+                                    BackgroundColor="#EDEBF6"
+                                    CornerRadius="10"
+                                    HeightRequest="60"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    WidthRequest="60"
+                                    IsVisible="False"
+                                    x:Name="VerificationCodeRoundRectangle"
+                                    Margin="0,10,0,0" />
+                    <Frame Grid.Row="2"
+                           BackgroundColor="DeepSkyBlue"
+                           CornerRadius="10"
+                           HeightRequest="60"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           WidthRequest="60"
+                           Padding="5"
+                           IsVisible="False"
+                           x:Name="VerificationCodeFrame"
+                           Margin="0,10,0,0">
+                        <!-- Added Padding -->
+                        <Image Source="anahtar.png"
+                               Aspect="AspectFit"
+                               Margin="5" />
+                        <!-- Added Margin -->
+                    </Frame>
+                    <Entry Grid.Row="2"
+                           Grid.Column="1"
+                           Placeholder="Onay Kodu"
+                           TextColor="Black"
+                           x:Name="EntryVerificationCode"
+                           VerticalOptions="Center"
+                           IsVisible="False"
+                           Margin="0,10,0,0"/>
+
+                    <!-- Login Button -->
+                    <Button Grid.Row="3"
+                            Grid.ColumnSpan="2"
+                            Margin="0,20,0,0"
+                            BackgroundColor="DeepSkyBlue"
+                            x:Name="LoginButton"
+                            Clicked="LoginButton_Clicked"
+                            HeightRequest="60"
+                            Text="Giriş Yap"
+                            TextColor="#FBF6FD"
+                            IsEnabled="False"/>
+                </Grid>
+                <Button Margin="0,30,0,0"
+                        BackgroundColor="#FBF6FD"
+                        HeightRequest="60"
+                        x:Name="RegisterButton"
+                        Clicked="RegisterButton_Clicked"
+                        Text="Hesap Oluştur..."
+                        TextColor="DeepSkyBlue"/>
+                <Label Text="transcriptionLabel"
+                       Opacity="0"
+                       x:Name="transcriptionLabel"/>
+                <!-- Phone Number Display Label -->
+                <Label x:Name="PhoneNumberLabel"
+                       Opacity="0"
+                       Text="Telefon Numarası:"
+                       TextColor="#2D2D2D"
+                       FontAttributes="Bold"
+                       Margin="0,20,0,0"/>
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

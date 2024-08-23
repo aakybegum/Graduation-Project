@@ -1,0 +1,49 @@
+/* _content/SignalRServer/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-jx4k5exsxl] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-jx4k5exsxl] {
+  color: #0077cc;
+}
+
+.btn-primary[b-jx4k5exsxl] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-jx4k5exsxl], .nav-pills .show > .nav-link[b-jx4k5exsxl] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-jx4k5exsxl] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-jx4k5exsxl] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-jx4k5exsxl] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-jx4k5exsxl] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-jx4k5exsxl] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

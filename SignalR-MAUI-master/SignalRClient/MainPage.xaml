@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SignalRClient.MainPage"
+             BackgroundColor="#F0F0F0"
+             Padding="5">
+
+    <Grid RowDefinitions="Auto, Auto, Auto, *, Auto, Auto, Auto, Auto, Auto, Auto, Auto"
+          ColumnDefinitions="*">
+
+        <!-- Dinleme Komutları Butonu -->
+        <Button
+            Grid.Row="0"
+            x:Name="btnListenCommands"
+            Text="Listen Commands"
+            FontSize="Large"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Start"
+            Clicked="btnListenCommands_Clicked"
+            HeightRequest="60"
+            WidthRequest="300"
+            Opacity="0"
+            BackgroundColor="#2196F3"
+            TextColor="White"
+            CornerRadius="15"
+            Margin="0,0,0,10"/>
+
+        <!-- Kullanıcı Adı Girişi -->
+        <Frame Grid.Row="1" BackgroundColor="White" CornerRadius="10" Margin="0,0,0,3">
+            <Entry
+                x:Name="txtUsername"
+                Placeholder="Adınız"
+                FontSize="12"
+                HeightRequest="35"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                TextColor="#333"
+                PlaceholderColor="#888"/>
+        </Frame>
+
+        <!-- Telefon Numarası Etiketi -->
+        <Label
+            Grid.Row="2"
+            x:Name="lblPhoneNumber"
+            Text=""
+            FontSize="12"
+            TextColor="#616161"
+            Margin="0,0,0,3"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Start"
+            Opacity="0"/>
+
+        <!-- Sohbet Etiketi -->
+        <Frame Grid.Row="3" BackgroundColor="#FFFFFF" CornerRadius="10" Padding="0">
+            <ScrollView
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <StackLayout
+                    x:Name="lblChat"
+                    Spacing="10">
+                    <!-- Mesaj baloncukları burada dinamik olarak oluşturulacak -->
+                </StackLayout>
+            </ScrollView>
+        </Frame>
+
+        <!-- Alıcı Telefon Numarası Girişi -->
+        <Frame Grid.Row="4" BackgroundColor="White" CornerRadius="10" Margin="0,0,0,3">
+            <Entry
+                x:Name="txtRecipientPhoneNumber"
+                Placeholder="Alıcının Telefon Numarası"
+                FontSize="12"
+                HeightRequest="35"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                TextColor="#333"
+                PlaceholderColor="#888"/>
+        </Frame>
+
+        <!-- Mesaj Girişi -->
+        <Frame Grid.Row="5" BackgroundColor="White" CornerRadius="10" Margin="0,0,0,3">
+            <Entry
+                x:Name="txtMessage"
+                Placeholder="Mesajınızı girin"
+                FontSize="12"
+                HeightRequest="35"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                TextColor="#333"
+                PlaceholderColor="#888"/>
+        </Frame>
+
+        <!-- Gönder Butonu -->
+        <Button
+            Grid.Row="6"
+            x:Name="btnSend"
+            Text="Gönder"
+            BackgroundColor="#2196F3"
+            TextColor="White"
+            CornerRadius="15"
+            Padding="8"
+            Margin="0,3,0,3"
+            FontSize="14"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Start"
+            Clicked="btnSend_Clicked"/>
+
+        <!-- Kullanıcıya Gönder Butonu -->
+        <Button
+            Grid.Row="7"
+            x:Name="btnSendToUser"
+            Text="Kullanıcıya Gönder"
+            BackgroundColor="#1976D2"
+            TextColor="White"
+            CornerRadius="15"
+            Padding="8"
+            Margin="0,3,0,3"
+            FontSize="14"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Start"
+            Clicked="btnSendToUser_Clicked"/>
+
+        <!-- Kayıt Butonu -->
+        <Button
+            Grid.Row="8"
+            x:Name="btnRecord"
+            Text="Kaydet"
+            BackgroundColor="#0D47A1"
+            TextColor="White"
+            CornerRadius="15"
+            Padding="8"
+            Margin="0,3,0,3"
+            FontSize="14"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Start"
+            Clicked="btnRecord_Clicked"/>
+
+        <!-- Transkripsiyon Etiketi -->
+        <Label
+            Grid.Row="9"
+            x:Name="transcriptionLabel"
+            Text=""
+            FontSize="12"
+            TextColor="#333"
+            Margin="0,8,0,8"
+            HorizontalOptions="EndAndExpand"
+            VerticalOptions="EndAndExpand"/>
+
+        <!-- Durum Etiketi -->
+        <Label
+            Grid.Row="10"
+            x:Name="statusLabel"
+            Text="Durum"
+            FontSize="12"
+            TextColor="#616161"
+            Margin="0,8,0,8"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"/>
+
+    </Grid>
+</ContentPage>
